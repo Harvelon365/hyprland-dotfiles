@@ -2,7 +2,7 @@
 
 hl.on("hyprland.start", function ()
     hl.exec_cmd(Terminal)
-    hl.exec_cmd("waybar --config " .. os.getenv("HOME") .. ".config/hypr/waybar")
+    hl.exec_cmd(Waybar)
     hl.exec_cmd("systemctl --user start hyprpolkitagent")
     hl.exec_cmd("syncthing --no-browser")
     hl.exec_cmd("shairport-sync")
