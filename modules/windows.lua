@@ -20,13 +20,13 @@ hl.window_rule({
     no_focus = true,
 })
 
-hl.window_rule({
-    match = {
-        class = "^(zen)$"
-    },
-    workspace = "5",
-    opaque = true
-})
+-- hl.window_rule({
+--     match = {
+--         class = "^(zen)$"
+--     },
+--     workspace = "5",
+--     opaque = true
+-- })
 
 hl.window_rule({
     match = {

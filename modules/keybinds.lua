@@ -41,3 +41,6 @@ hl.bind("CTRL + SHIFT + F11", hl.dsp.exec_cmd("dunstify -t 2000 -r 9993 \"$(" ..
 --- MISC ---
 
 hl.bind(mainMod .. " + CTRL + R", hl.dsp.exec_cmd("killall waybar; " .. Waybar))
+
+hl.bind("XF86MonBrightnessUp", hl.dsp.exec_cmd("hyprlight i"))
+hl.bind("XF86MonBrightnessDown", hl.dsp.exec_cmd("hyprlight d"))

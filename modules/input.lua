@@ -9,6 +9,9 @@ hl.config({
         kb_rules = "",
 
         follow_mouse = 2,
+        touchpad = {
+            natural_scroll = true,
+        },
 
         sensitivity = 0,
     }

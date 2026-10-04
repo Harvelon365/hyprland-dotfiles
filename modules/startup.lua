@@ -8,7 +8,6 @@ hl.on("hyprland.start", function ()
     hl.exec_cmd("shairport-sync")
     hl.exec_cmd("hyprctl setcursor Posy_Cursor_Black 24")
     hl.exec_cmd("systemctl start --user dunst")
-    hl.exec_cmd("antimicrox")
 end)
 
 --------- ENVIRONMENT VARIABLES ---------
