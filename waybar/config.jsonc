@@ -1,0 +1,63 @@
+[
+    {
+        "output": "DP-2",
+        "layer": "top",
+        "position": "top",
+        "height": 26,
+        "modules-left": ["custom/pacman"],
+        "modules-center": ["hyprland/workspaces"],
+        "modules-right": ["tray", "clock"],
+        "clock": {
+            "format": "{:%H:%M}",
+            "tooltip": false
+        },
+        "custom/pacman": {
+            "format": "{icon}{0}",
+            "return-type": "json",
+            "format-icons": {
+                "pending-updates": " ",
+                "updated": ""
+            },
+            "exec-if": "which waybar-updates",
+            "exec": "waybar-updates -d"
+        }
+    },
+    {
+        "output": "HDMI-A-1",
+        "layer": "top",
+        "position": "top",
+        "height": 26,
+        "modules-left": ["cpu", "memory", "custom/gpu-usage", "custom/countdown"],
+        "modules-center": ["hyprland/workspaces"],
+        "modules-right": ["clock"],
+        "cpu": {
+            "format": "CPU: {usage}%"
+        },
+        "memory": {
+            "format": "MEM: {percentage}%"
+        },
+        "clock": {
+            "format": "{:%a %b %d   %H:%M}",
+            "tooltip": false
+        },
+        "custom/countdown":
+        {
+            "exec": "~/.config/waybar/scripts/countdown/countdown.sh",
+            "return-type": "json",
+            "format": "{}",
+            "interval": 3600,
+
+            /// To use tui on right click use something like this
+            ///  "on-click-right": "foot ~/.config/waybar/scripts/countdown/countdown.sh --show-tui",	
+
+            "on-click-right": "killall rofi || bash ~/.config/waybar/scripts/countdown/countdown.sh --show-rofi",
+            "on-scroll-up": "~/.config/waybar/scripts/countdown/countdown.sh --scroll-up",
+            "on-scroll-down": "~/.config/waybar/scripts/countdown/countdown.sh --scroll-down"
+        },
+        "custom/gpu-usage": {
+            "format": "GPU: {}",
+            "exec": "gpu-usage-waybar",
+            "return-type": "json"
+        }
+    }
+]

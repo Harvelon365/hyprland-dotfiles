@@ -1,0 +1,128 @@
+* {
+    /* `otf-font-awesome` is required to be installed for icons */
+    font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+    font-size: 13px;
+}
+
+window#waybar {
+    background-color: transparent;
+    color: #000000;
+    transition-property: background-color;
+    transition-duration: .5s;
+}
+
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+#workspaces {
+    background-color: #000000;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+#workspaces button {
+    padding: 0 5px;
+    background-color: transparent;
+    color: #ffffff;
+}
+
+#workspaces button:hover {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+#workspaces button.active {
+    background-color: #1e90ff;
+    border-radius: 0px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    color: #000000;
+    /* box-shadow: inset 0 -3px #ffffff; */
+}
+
+#workspaces button.urgent {
+    animation-name: blink;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    border-radius: 0px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.modules-left {
+    margin-left: 10px;
+    background-color: #000000;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.modules-right {
+    margin-right: 10px;
+    background-color: #000000;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+#clock,
+#cpu,
+#memory,
+#tray,
+#custom-pacman,
+#custom-gpu-usage,
+#custom-countdown {
+    padding: 0 10px;
+    color: #ffffff;
+}
+
+/* #window,
+#workspaces {
+    margin: 0 4px;
+} */
+
+/* If workspaces is the leftmost module, omit left margin
+.modules-left > widget:first-child > #workspaces {
+    margin-left: 0;
+}
+
+If workspaces is the rightmost module, omit right margin
+.modules-right > widget:last-child > #workspaces {
+    margin-right: 0;
+} */
+
+@keyframes blink {
+    to {
+        background-color: #d21404;
+        color: #000000;
+    }
+}
+
+#custom-pacman {
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+}
+
+/* #custom-pacman.pending-updates {
+	animation-name: blink;
+	animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+} */
+
+#custom-countdown.expired {
+    animation-name: blink;
+	animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+tooltip {
+    color: #ffffff;
+    background-color: #000000;
+    border: none;
+}
