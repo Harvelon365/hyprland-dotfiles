@@ -51,6 +51,8 @@ window#waybar.hidden {
 }
 
 .modules-left {
+    margin-right: 10px;
+    padding-left: 10px;
     margin-left: 10px;
     background-color: #000000;
     border-bottom-left-radius: 5px;
@@ -59,19 +61,21 @@ window#waybar.hidden {
 
 .modules-right {
     margin-right: 10px;
+    padding-left: 10px;
     background-color: #000000;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
 }
 
 #clock,
+#battery,
 #cpu,
 #memory,
 #tray,
 #custom-pacman,
 #custom-gpu-usage,
 #custom-countdown {
-    padding: 0 10px;
+    padding: 0 10px 0 0;
     color: #ffffff;
 }
 
@@ -125,4 +129,8 @@ tooltip {
     color: #ffffff;
     background-color: #000000;
     border: none;
+}
+
+#battery {
+    color: #ffffff;
 }

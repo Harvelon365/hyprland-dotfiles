@@ -6,7 +6,7 @@
         "height": 26,
         "modules-left": ["custom/pacman", "cpu", "memory"],
         "modules-center": ["hyprland/workspaces"],
-        "modules-right": ["tray", "clock"],
+        "modules-right": ["tray", "battery", "clock"],
         "cpu": {
             "format": "CPU: {usage}%"
         },
