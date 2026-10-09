@@ -9,6 +9,7 @@ hl.on("hyprland.start", function ()
     hl.exec_cmd("hyprctl setcursor Posy_Cursor_Black 24")
     hl.exec_cmd("systemctl start --user dunst")
     hl.exec_cmd("antimicrox")
+    hl.exec_cmd("/bin/bash -c 'while true; do sleep 10m; timeout 30 thunderbird --headless; done'")
 end)
 
 --------- ENVIRONMENT VARIABLES ---------
